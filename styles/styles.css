@@ -12,10 +12,17 @@ header {
     padding: 1rem;
 }
 
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
 nav a {
     color: white;
     text-decoration: none;
     margin-right: 1rem;
+    padding: 0.5rem;
+    display: block;
 }
 
 /* Main Styles */
@@ -25,9 +32,16 @@ main {
     padding: 1rem;
 }
 
+h1 {
+    color: #333;
+}
+
 main img {
     width: 150px;
     height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 /* Paragraph Styles */
