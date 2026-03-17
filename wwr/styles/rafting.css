@@ -1,0 +1,716 @@
+/* CSS Variables - Color Scheme */
+:root {
+    --primary-color: #264653;
+    --secondary-color: #f4a261;
+    --accent1-color: #e9c46a;
+    --accent2-color: #2a9d8f;
+    --body-font: 'Montserrat', Arial, Helvetica, sans-serif;
+    --heading-font: 'Montserrat', Georgia, 'Times New Roman', serif;
+}
+
+/* Reset CSS Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+/* Header, Main, Footer - Limit width and center */
+header, main, footer {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Heading Styles */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Basic margin and padding for nav, paragraph, section, and article */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav ul li {
+    list-style: none;
+    list-style-type: none;
+    display: list-item;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Remove the underlines from the social media image links in the footer */
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
+}
+
+/* Hero Div - Relative positioning for overlays */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+/* Dark overlay for text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+/* Hero Article - Transparent Black Background */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border: 2px solid var(--accent2-color);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+.hero article p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Home Page Hero Section */
+.hero-home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-home > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Dark overlay for hero-home */
+.hero-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 1;
+}
+
+/* Title Bar at Top */
+.hero-title-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-title-bar h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+/* Yellow Content Box */
+.hero-content-box {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(233, 196, 106, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+.hero-content-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-content-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Button in Hero */
+.hero-content-box .button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content-box .button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(38, 70, 83, 0.95);
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid var(--accent2-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent1-color);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Card with light background option */
+.card-light {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.card-light h3 {
+    color: var(--primary-color);
+}
+
+.card-light p {
+    color: #555555;
+}
+
+/* Grid Layout for Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+}
+
+/* History Section */
+section {
+    background-color: #f8f9fa;
+    margin: 16px 0;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333333;
+}
+
+/* History Section - Same as Adventure */
+.history {
+    background-color: rgba(38, 70, 83, 0.95);
+    color: #ffffff;
+    margin: 16px 0;
+    padding: 32px 24px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent2-color);
+}
+
+.history h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent1-color);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.history p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* Adventure Section */
+.adventure {
+    background-color: rgba(38, 70, 83, 0.95);
+    color: #ffffff;
+    margin: 16px 0;
+    padding: 32px 24px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent2-color);
+}
+
+.adventure h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent1-color);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.adventure p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+}
+
+/* Contact Info */
+.contact-info {
+    padding: 24px;
+}
+
+.contact-info h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent1-color);
+    margin-bottom: 16px;
+}
+
+.contact-info p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.contact-info strong {
+    color: var(--accent1-color);
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 24px;
+}
+
+.contact-form h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 14px 28px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .hero-title-bar h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content-box {
+        padding: 15px;
+        bottom: 60px;
+        max-width: 350px;
+    }
+    
+    .hero-content-box h2 {
+        font-size: 1rem;
+    }
+    
+    .hero-content-box p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-bar {
+        padding: 15px 20px;
+    }
+    
+    .hero-title-bar h1 {
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-content-box {
+        padding: 12px;
+        bottom: 40px;
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    .hero-content-box h2 {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content-box p {
+        font-size: 0.8rem;
+    }
+    
+    .hero-content-box .button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    z-index: 2;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Styles */
+section {
+    background-color: #f9f9f9;
+    margin: 16px 0;
+    padding: 16px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header nav ul {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    header nav ul li a {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+    
+    .hero article {
+        max-width: 90%;
+        left: 5%;
+        right: 5%;
+        bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    
+    .hero article img {
+        width: 80px;
+    }
+    
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+    
+    section, article {
+        margin: 8px;
+        padding: 12px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+    }
+    
+    header img {
+        width: 80px;
+    }
+    
+    header nav ul {
+        gap: 0.5rem;
+    }
+    
+    header nav ul li a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    .hero > img {
+        min-height: 300px;
+    }
+    
+    .hero h1 {
+        font-size: 1.25rem;
+        padding: 8px;
+        top: 10px;
+    }
+    
+    .hero article {
+        max-width: 95%;
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    
+    .hero article img {
+        float: none;
+        width: 100%;
+        max-width: 150px;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+    
+    h1 {
+        font-size: 1.25rem;
+    }
+    
+    h2 {
+        font-size: 1.125rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
