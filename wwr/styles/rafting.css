@@ -4,8 +4,8 @@
     --secondary-color: #f4a261;
     --accent1-color: #e9c46a;
     --accent2-color: #2a9d8f;
-    --body-font: 'Montserrat', Arial, Helvetica, sans-serif;
-    --heading-font: 'Montserrat', Georgia, 'Times New Roman', serif;
+    --body-font: Arial, Helvetica, sans-serif;
+    --heading-font: Georgia, 'Times New Roman', serif;
 }
 
 /* Reset CSS Box Model */
@@ -161,7 +161,7 @@ header nav ul li a:hover {
 }
 
 .hero article p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95rem;
     color: #ffffff;
     line-height: 1.5;
@@ -216,7 +216,7 @@ header nav ul li a:hover {
 }
 
 .hero-title-bar h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
     color: #ffffff;
@@ -244,7 +244,7 @@ header nav ul li a:hover {
 }
 
 .hero-content-box h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -253,7 +253,7 @@ header nav ul li a:hover {
 }
 
 .hero-content-box p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--primary-color);
@@ -268,7 +268,7 @@ header nav ul li a:hover {
     color: #ffffff;
     padding: 14px 32px;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 1rem;
     border-radius: 4px;
@@ -299,7 +299,7 @@ header nav ul li a:hover {
 }
 
 .card h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--accent1-color);
@@ -308,7 +308,7 @@ header nav ul li a:hover {
 }
 
 .card p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #ffffff;
@@ -350,7 +350,7 @@ section {
 }
 
 section h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -361,7 +361,7 @@ section h2 {
 }
 
 section p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.7;
     color: #333333;
@@ -378,7 +378,7 @@ section p {
 }
 
 .history h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent1-color);
@@ -389,7 +389,7 @@ section p {
 }
 
 .history p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.7;
     color: #ffffff;
@@ -406,7 +406,7 @@ section p {
 }
 
 .adventure h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent1-color);
@@ -417,7 +417,7 @@ section p {
 }
 
 .adventure p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.7;
     color: #ffffff;
@@ -437,7 +437,7 @@ section p {
 }
 
 .contact-info h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent1-color);
@@ -445,7 +445,7 @@ section p {
 }
 
 .contact-info p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -460,7 +460,7 @@ section p {
 }
 
 .contact-form h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -473,7 +473,7 @@ section p {
 
 .form-group label {
     display: block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 6px;
@@ -486,7 +486,7 @@ section p {
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
@@ -505,7 +505,7 @@ section p {
     color: var(--primary-color);
     padding: 14px 28px;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 1rem;
     border-radius: 4px;
