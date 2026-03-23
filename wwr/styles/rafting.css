@@ -85,6 +85,12 @@ nav a:hover {
     max-width: 300px;
 }
 
+.hero article h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
 .hero article img {
     float: right;
     width: 100px;
