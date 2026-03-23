@@ -79,7 +79,7 @@ nav a:hover {
     max-width: 300px;
 }
 
-.hero article h3 {
+.hero article h2 {
     font-size: 1.1rem;
     color: var(--primary-color);
     margin-bottom: 8px;
