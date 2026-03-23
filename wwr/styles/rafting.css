@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: var(--primary-color);
+    font-family: Arial, sans-serif;
     background-color: var(--light-gray);
     color: var(--dark-gray);
     line-height: 1.6;
@@ -50,6 +50,7 @@ nav a:hover {
 .hero {
     position: relative;
     text-align: center;
+    background-color: var(--accent-color);
 }
 
 .hero img {
