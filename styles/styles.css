@@ -12,6 +12,12 @@ body {
     padding: 0;
 }
 
+/* Header and Footer Styles */
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 /* Header Styles */
 header {
     background-color: #333;
@@ -22,25 +28,26 @@ header {
 nav {
     background-color: #333;
     padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-right: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     display: block;
 }
 
 /* Main Styles */
 main {
-    max-width: 800px;
-    margin: 0 auto;
     padding: 1rem;
 }
 
 h1 {
     color: #333;
+    border-bottom: 2px solid #333;
 }
 
 main img {
@@ -58,14 +65,15 @@ p {
     padding: 0;
 }
 
-/* Aside Styles */
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 1rem;
+}
+
 aside {
-    width: 250px;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    background-color: #f9f9f9;
-    color: #333;
-    position: relative;
+    grid-row: 1 / 2;
 }
 
 aside img {
