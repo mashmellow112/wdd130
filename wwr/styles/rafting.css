@@ -181,9 +181,10 @@ footer p {
     text-align: center;
 }
 
-.info-item h3 {
+.info-item h2 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
 
 .info-item p {
