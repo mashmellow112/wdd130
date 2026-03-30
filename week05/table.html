@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Exercise</title>
+    <link rel="stylesheet" href="styles/table.css">
+</head>
+
+<body>
+    <h1>League Standings Table</h1>
+    <table>
+        <caption>Southern and Western League Team Records and Player Counts</caption>
+        <thead>
+            <tr>
+                <th>League</th>
+                <th>Team</th>
+                <th>Record</th>
+                <th>Player Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">Southern</th>
+                <td>Parana</td>
+                <td>52-19</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Catarina</td>
+                <td>49-24</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Western</th>
+                <td>Lacerda</td>
+                <td>92-70</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td>75-87</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Rondonia</td>
+                <td>10-7</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Total Players</th>
+                <td>92</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- 
+    ANALYSIS QUESTIONS:
+
+    1. Why is rowspan used on the first cell of the first data row?
+       The rowspan attribute is used on the first cell of the first data row to indicate that the "Southern" 
+       league header should span across multiple rows in the same column. This occurs because there are 
+       two teams (Parana and Catarina) belonging to the Southern league. By using rowspan="2", the cell 
+       occupies the first column of both the first and second data rows, eliminating the need to repeat 
+       "Southern" for each team. 
+       
+       The method for determining the correct number of rows to span is to count how many consecutive 
+       rows in that column group share the same header value. For Southern, there are 2 teams so rowspan="2". 
+       For Western, there are 3 teams so rowspan="3".
+
+    2. How does border-collapse affect cell spacing and borders?
+       The border-collapse property controls how table borders are rendered. When set to "collapse", 
+       adjacent cell borders are merged into a single border, eliminating the double-border effect and 
+       reducing spacing between cells. When set to "separate" (the default), each cell maintains its 
+       own border with potential gaps between them. With collapse, the border becomes sharper and the 
+       table takes up less space, while with separate, you can see distinct borders with spacing between 
+       cells, but may get the "border doubling" effect where adjacent borders appear thicker.
+
+    3. What elements does the selector "thead tr, tfoot tr" target?
+       The selector "thead tr, tfoot tr" targets ALL tr (table row) elements that are direct children 
+       of thead AND ALL tr elements that are direct children of tfoot. In the DOM tree, this includes:
+       - All rows inside the <thead> element (the header row)
+       - All rows inside the <tfoot> element (the footer row)
+       This does NOT target rows in the <tbody> element.
+    -->
+</body>
+
+</html>
