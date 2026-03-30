@@ -258,9 +258,13 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
+.form-box fieldset input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
 .form-box fieldset label {
-    display: block;
-    margin-bottom: 0.5rem;
+    display: inline-block;
+    margin-right: 1rem;
     font-weight: normal;
     cursor: pointer;
 }
