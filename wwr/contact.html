@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-    <header>
+    <header class="sticky-header">
         <img src="images/z-splash.png" alt="Splash White Water Rafting Logo" width="80">
         <nav>
             <a href="index.html">Home</a>
@@ -19,102 +19,92 @@
         </nav>
     </header>
     <main>
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h1>Contact Us</h1>
-            <p class="contact-intro">We'd love to hear from you! Reach out to plan your next adventure.</p>
-            
-            <!-- Company Information -->
+        <section class="contact-info-section">
             <div class="company-info">
-                <div class="info-item">
-                    <h2>Address</h2>
-                    <p>123 River Road, Jinja, Uganda</p>
-                </div>
-                <div class="info-item">
-                    <h2>Phone</h2>
-                    <p>+256 701 234 567</p>
-                    <p>+256 772 987 654</p>
-                </div>
-                <div class="info-item">
-                    <h2>Email</h2>
-                    <p>info@splashrafting.com</p>
-                </div>
+                <h1>White Water Rafting Company</h1>
+                <p>123 Main River Street</p>
+                <p>Kolob, California</p>
+                <p>+1 999 999 9999</p>
+                <p>info@whitewater.com</p>
             </div>
 
-            <!-- Contact Container with Map and Form -->
             <div class="contact-container">
-                <!-- Google Map -->
                 <div class="map-box">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31918.123456789!2d33.204!3d0.428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMjUnNDIuMCIkMzPCsDEyJzE1LjAiRQ!5e0!3m2!1sen!2sug!4v1234567890" 
-                        width="600" 
-                        height="450" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31918.123456789!2d33.204!3d0.428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMjUnNDIuMCIkMzPCsDEyJzE1LjAiRQ!5e0!3m2!1sen!2sug!4v1234567890" 
+                            width="100%" 
+                            height="400" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
 
-                <!-- Contact Form -->
                 <div class="form-box">
-                    <form action="#" method="post">
+                    <form id="contactForm" action="#" method="post" novalidate>
                         <div class="field">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Placeholder">
                         </div>
 
                         <div class="field">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Placeholder">
                         </div>
 
-                        <fieldset>
+                        <fieldset class="message-purpose">
                             <legend>Message Purpose</legend>
-                            <input type="radio" id="purpose-general" name="purpose" value="general">
-                            <label for="purpose-general">General Inquiry</label>
-                            <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
-                            <label for="purpose-reservation">Reservation Question</label>
-                            <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
-                            <label for="purpose-suggestion">Website Suggestion</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="purpose" value="general" checked> General Inquiry
+                                </label>
+                                <label>
+                                    <input type="radio" name="purpose" value="reservation"> Reservation Question
+                                </label>
+                                <label>
+                                    <input type="radio" name="purpose" value="website"> Website Suggestion
+                                </label>
+                            </div>
                         </fieldset>
 
                         <div class="field">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Type your message here"></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Type here"></textarea>
                         </div>
 
-                        <div class="checkbox-field">
-                            <input type="checkbox" id="subscribe" name="subscribe">
-                            <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="newsletter"> Please Subscribe me to the monthly newsletter
+                            </label>
                         </div>
 
-                        <button type="submit">Send Message</button>
+                        <button type="submit" class="submit-btn">Get In Touch!</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <!-- Employee Profiles Section -->
         <section class="team-section">
-            <h2>Meet Our Team</h2>
+            <h2>We Are Here to Serve You</h2>
             <div class="team-grid">
                 <div class="team-card">
-                    <img src="images/bird.webp" alt="James - Lead Guide">
-                    <h3>James Mukisa</h3>
-                    <p>Lead Navigator</p>
+                    <img src="images/img.webp" alt="Employee Profile">
+                    <h3>Employee Profile</h3>
                 </div>
                 <div class="team-card">
-                    <img src="images/hero.webp" alt="Sarah - Senior Guide">
-                    <h3>Sarah Nampijja</h3>
-                    <p>Safety Specialist</p>
+                    <img src="images/img.webp" alt="Employee Profile">
+                    <h3>Employee Profile</h3>
                 </div>
                 <div class="team-card">
-                    <img src="images/img.webp" alt="Michael - Adventure Guide">
-                    <h3>Michael Okello</h3>
-                    <p>Guest Relations</p>
+                    <img src="images/happy-client.jpg" alt="Employee Profile">
+                    <h3>Employee Profile</h3>
                 </div>
             </div>
         </section>
+
+        
     </main>
     <footer>
         <p>&copy; 2026 Splash White Water Rafting Co. | Samanya Immanuel</p>
@@ -124,5 +114,6 @@
             <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
         </nav>
     </footer>
+    <script src="scripts/contact.js"></script>
 </body>
 </html>
